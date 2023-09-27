@@ -41,6 +41,18 @@ const BaristaForm = () => {
     return (
         <div>
             <h2>Hi, I'd like to order a: </h2>
+
+            <div className="drink-container">
+                <h2 className="mini-header">{drink}</h2>
+                <button
+                    type="new-drink-button"
+                    className="button newdrink"
+                    onClick={onNewDrink}
+                >
+                    🔄
+                </button>
+            </div>
+
             <form>
                 <h3>Temperature</h3>
                 <div className="answer-space" >
@@ -101,6 +113,7 @@ const BaristaForm = () => {
 
 
             </form>
+           
             <button className="button submit" type="new-drink-button">New Drink</button>
             <button className="button submit" type="submit" onClick={onCheckAnswer}>Check Answer</button>
         </div>
